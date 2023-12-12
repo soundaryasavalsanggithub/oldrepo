@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            const registrationData=new Map();
+            function submitForm(){
+                const firstname=document.regform.firstname.value;
+                const middlename=document.regform.middlename.value;
+                const lastname=document.regform.lastname.value;
+                const registerno=document.regform.registernumber.value;
+
+                registrationData.set("firstname:",firstname);
+                registrationData.set("middlename:",middlename);
+                registrationData.set("lastname:",lastname);
+                registrationData.set("registerno:",registerno);
+
+                    document.write(registrationData.get("firstname:"))
+                    document.write(registrationData.get("middlename:"))
+                    document.write(registrationData.get("lastname:"))
+                    document.write(registrationData.get("registerno:"))
+                        document.write("successfully")
+                    }
+
+        </script>
+        </head>
+
+        <body>
+            <center>
+                <form id="registerform" name="regform">
+                <br><br>
+                <label for="First Name">First Name:</label>
+                <input type="text" id="firstname" name="firstname" value=""><br><br>
+
+                <lable for="Middle Name">Middle Name:</lable>
+                <input type="text" id="middlename" name="middlename" value=""><br><br>
+                
+                <label for="Last Name">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" value=""><br><br>
+                
+                <label for="Register No">Register No:</label>
+                <input type="text" id="registernumber" name="registernumber" value=""/>
+                <br><br>
+                
+                <input type="button" value="Submit" onclick="submitForm()"/>
+                </form>
+            </center>
+        </body>
+</html> 
